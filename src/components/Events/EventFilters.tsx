@@ -21,7 +21,8 @@ export const EventFilters = () => {
     <div className="px-4">
       <Card className="fixed w-[31%] z-0 mt-20">
         <div className="px-2">
-          <div className="flex justify-center py-6 space-x-6">
+          <h1 className="font-bold p-2">Filters</h1>
+          <div className="flex justify-center py-4 space-x-6">
             <Button variant={"link"}>
               <FcCalendar size={50} />
             </Button>
@@ -46,8 +47,8 @@ export const EventFilters = () => {
               <Popover>
                 <PopoverTrigger asChild>
                   <Button className="w-full" variant={"outline"}>
+                    Filter by date
                     <IoCalendarOutline />
-                    Pick a date
                   </Button>
                 </PopoverTrigger>
                 <PopoverContent>

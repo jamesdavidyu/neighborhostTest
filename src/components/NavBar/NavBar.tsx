@@ -8,20 +8,20 @@ export const NavBar = () => {
     <div className="fixed w-full z-10">
       <Card className="h-16 rounded-none grid grid-cols-3 p-3">
         <h1>neighborhost</h1>
-        <div className="flex">
+        {/* <div className="flex">
           <Input placeholder="Email" />
           <Input placeholder="Password" />
           <Button>Log In</Button>
           <Button>Sign Up</Button>
-        </div>
-        {/* <div>
+        </div> */}
+        <div>
           <Button className="w-full">+ Plan an Event</Button>
         </div>
         <div className="flex justify-end">
           <Avatar>
             <AvatarImage src="https://github.com/shadcn.png" />
           </Avatar>
-        </div> */}
+        </div>
       </Card>
     </div>
   );

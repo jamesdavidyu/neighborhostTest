@@ -6,10 +6,10 @@ import { mockEvents } from "@/mockData/events";
 export default function Home() {
   return (
     <div>
-      <main className="grid grid-cols-3">
-        {/* <EventFilters /> */}
+      <main className="grid grid-cols-1 md:grid-cols-3">
+        <EventFilters />
         <EventsList events={mockEvents} />
-        {/* <Previewer /> */}
+        <Previewer />
       </main>
     </div>
   );
