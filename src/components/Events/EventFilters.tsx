@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "../ui/button";
 import { Card } from "../ui/card";
 import { Input } from "../ui/input";
@@ -15,23 +17,26 @@ import { FaMapMarkedAlt } from "react-icons/fa";
 import { BsSearch } from "react-icons/bs";
 import { IoCalendarOutline } from "react-icons/io5";
 import { FaCheck } from "react-icons/fa6";
+import { useState } from "react";
 
 export const EventFilters = () => {
+  const [date, setDate] = useState<Date>();
   return (
     <div className="px-4">
       <Card className="fixed w-[31%] z-0 mt-20">
         <div className="px-2">
           <h1 className="font-bold p-2">Filters</h1>
-          <div className="flex justify-center py-4 space-x-6">
-            <Button variant={"link"}>
+          <div className="flex justify-center py-2 space-x-6">
+            <button>
               <FcCalendar size={50} />
-            </Button>
-            <Button variant={"link"}>
+            </button>
+            <button>
               <FaMapMarkedAlt size={50} />
-            </Button>
+            </button>
           </div>
           <div className="pt-2">
-            <Select>
+            <Input placeholder="Search by zipcode or city" className="text-center"/>
+            {/* <Select>
               <SelectTrigger className="justify-center">
                 <SelectValue placeholder="Filter by location" />
               </SelectTrigger>
@@ -40,7 +45,7 @@ export const EventFilters = () => {
                 <SelectItem value="my_zipcode">My zipcode</SelectItem>
                 <SelectItem value="my_neighborhood">My neighborhood</SelectItem>
               </SelectContent>
-            </Select>
+            </Select> */}
           </div>
           <div className="pt-2">
             <form>
@@ -62,7 +67,7 @@ export const EventFilters = () => {
                       <SelectItem value="before">Before</SelectItem>
                     </SelectContent>
                   </Select>
-                  <Calendar />
+                  <Calendar mode="single" selected={date} onSelect={setDate} initialFocus />
                   <div className="flex justify-between">
                     <Select>
                       <SelectTrigger className="w-[50%]">
