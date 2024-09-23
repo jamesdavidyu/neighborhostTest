@@ -6,8 +6,8 @@ import { Input } from "../ui/input";
 export const NavBar = () => {
   return (
     <div className="fixed w-full z-10">
-      <Card className="h-16 rounded-none grid grid-cols-3 p-3">
-        <h1>neighborhost</h1>
+      <Card className="h-16 rounded-none grid grid-cols-3 p-3 border-b-black">
+        <Button variant={"link"} className="flex justify-start text-2xl">neighorhost</Button>
         {/* <div className="flex">
           <Input placeholder="Email" />
           <Input placeholder="Password" />
