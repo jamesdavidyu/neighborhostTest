@@ -31,11 +31,14 @@ export const EventFilters = () => {
               <FcCalendar size={50} />
             </button>
             <button>
-              <FaMapMarkedAlt size={50} />
+              <FaMapMarkedAlt size={50} color="navy" />
             </button>
           </div>
           <div className="pt-2">
-            <Input placeholder="Search by zipcode or city" className="text-center"/>
+            <Input
+              placeholder="Search by zipcode or city"
+              className="text-center"
+            />
             {/* <Select>
               <SelectTrigger className="justify-center">
                 <SelectValue placeholder="Filter by location" />
@@ -52,7 +55,7 @@ export const EventFilters = () => {
               <Popover>
                 <PopoverTrigger asChild>
                   <Button className="w-full" variant={"outline"}>
-                    Filter by date
+                    Filter by date&nbsp;
                     <IoCalendarOutline />
                   </Button>
                 </PopoverTrigger>
@@ -67,7 +70,12 @@ export const EventFilters = () => {
                       <SelectItem value="before">Before</SelectItem>
                     </SelectContent>
                   </Select>
-                  <Calendar mode="single" selected={date} onSelect={setDate} initialFocus />
+                  <Calendar
+                    mode="single"
+                    selected={date}
+                    onSelect={setDate}
+                    initialFocus
+                  />
                   <div className="flex justify-between">
                     <Select>
                       <SelectTrigger className="w-[50%]">
